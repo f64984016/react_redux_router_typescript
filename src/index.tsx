@@ -4,21 +4,24 @@ import { Provider } from "react-redux";
 import { store } from "./app/store";
 import reportWebVitals from "./reportWebVitals";
 import "./index.css";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { HashRouter as Router, Route, Routes } from "react-router-dom";
 import TopPage from "./pages/top/TopPage";
+import NotFoundPage from './pages/notfound/NotFoundPage'
 
 const container = document.getElementById("root")!;
 const root = createRoot(container);
 
 root.render(
   <React.StrictMode>
-    <BrowserRouter>
+    <Router>
       <Provider store={store}>
         <Routes>
+          <Route path="*" element={<NotFoundPage />} />
           <Route path="/" element={<TopPage />} />
+          <Route path="/custom1" />
         </Routes>
       </Provider>
-    </BrowserRouter>
+    </Router>
   </React.StrictMode>
 );
 
