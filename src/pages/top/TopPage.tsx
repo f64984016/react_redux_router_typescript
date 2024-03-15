@@ -2,10 +2,25 @@ import React from "react";
 import logo from "./logo.svg";
 import { Counter } from "../../features/counter/Counter";
 import "./TopPage.css";
+import { useNavigate } from 'react-router-dom'
 
 const TopPage = (): JSX.Element => {
+  const navigate = useNavigate()
+
+  /**
+   * Call this function to redirect the user to the homepage.
+   */
+  const redirectToMuiPage = () => {
+      navigate('/mui')
+  }
+
   return (
     <div className="App">
+      <header className="App-header">
+        <button onClick={() => redirectToMuiPage()}>Go Mui Page!</button>
+        <button onClick={() => redirectToMuiPage()}>Go Mui Page!</button>
+        <button onClick={() => redirectToMuiPage()}>Go Mui Page!</button>
+      </header>
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <Counter />
