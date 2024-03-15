@@ -7,6 +7,7 @@ import "./index.css";
 import { HashRouter as Router, Route, Routes } from "react-router-dom";
 import TopPage from "./pages/top/TopPage";
 import NotFoundPage from './pages/notfound/NotFoundPage'
+import Mui from './pages/mui/Mui'
 
 const container = document.getElementById("root")!;
 const root = createRoot(container);
@@ -18,7 +19,7 @@ root.render(
         <Routes>
           <Route path="*" element={<NotFoundPage />} />
           <Route path="/" element={<TopPage />} />
-          <Route path="/custom1" />
+          <Route path="/mui" element={<Mui />} />
         </Routes>
       </Provider>
     </Router>
