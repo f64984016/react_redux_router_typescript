@@ -5,6 +5,7 @@ import { store } from "./app/store";
 import reportWebVitals from "./reportWebVitals";
 import "./index.css";
 import { HashRouter as Router, Route, Routes } from "react-router-dom";
+import HomePage from "./pages/home/HomePage";
 import TopPage from "./pages/top/TopPage";
 import NotFoundPage from './pages/notfound/NotFoundPage'
 import Mui from './pages/mui/Mui'
@@ -18,7 +19,8 @@ root.render(
       <Provider store={store}>
         <Routes>
           <Route path="*" element={<NotFoundPage />} />
-          <Route path="/" element={<TopPage />} />
+          <Route path="/" element={<HomePage />} />
+          <Route path="/example" element={<TopPage />} />
           <Route path="/mui" element={<Mui />} />
         </Routes>
       </Provider>
