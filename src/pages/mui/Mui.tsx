@@ -8,6 +8,10 @@ import '@fontsource/roboto/400.css';
 import '@fontsource/roboto/500.css';
 import '@fontsource/roboto/700.css';
 
+import Box from '@mui/material/Box';
+import Toolbar from '@mui/material/Toolbar';
+import Typography from '@mui/material/Typography';
+import DrawerAppBar from '../../features/drawerAppBar/drawerAppBar';
 
 const Mui: React.FC = () => {
     const navigate = useNavigate()
@@ -21,8 +25,11 @@ const Mui: React.FC = () => {
 
     return (
         <div style={{ position: 'relative', width: '100%', display: 'flex', justifyContent: 'center', alignItems: 'center', flexDirection: 'column' }}>
-            <h1 style={{ fontSize: '4em' }}>Mui</h1>
-
+            <DrawerAppBar />
+            <Box component="main" sx={{ p: 3 }}>
+              <Toolbar />
+              <h1 style={{ fontSize: '4em' }}>Try MUI</h1>
+            </Box>
 
             <span style={{ cursor: 'pointer' }} onClick={() => redirectToHomePage()}>
                 Homepage
