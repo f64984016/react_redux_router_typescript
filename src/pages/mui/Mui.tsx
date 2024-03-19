@@ -1,5 +1,5 @@
 import React from 'react'
-import { useNavigate } from 'react-router-dom'
+
 /**
  * Material UI uses the Roboto font by default.
  */
@@ -10,19 +10,9 @@ import '@fontsource/roboto/700.css';
 
 import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
-import Typography from '@mui/material/Typography';
 import DrawerAppBar from '../../features/drawerAppBar/drawerAppBar';
 
 const Mui: React.FC = () => {
-    const navigate = useNavigate()
-
-    /**
-     * Call this function to redirect the user to the homepage.
-     */
-    const redirectToHomePage = () => {
-        navigate('/')
-    }
-
     return (
         <div style={{ position: 'relative', width: '100%', display: 'flex', justifyContent: 'center', alignItems: 'center', flexDirection: 'column' }}>
             <DrawerAppBar />
@@ -30,10 +20,6 @@ const Mui: React.FC = () => {
               <Toolbar />
               <h1 style={{ fontSize: '4em' }}>Try MUI</h1>
             </Box>
-
-            <span style={{ cursor: 'pointer' }} onClick={() => redirectToHomePage()}>
-                Homepage
-            </span>
         </div>
     )
 }
