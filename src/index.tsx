@@ -9,6 +9,7 @@ import HomePage from "./pages/home/HomePage";
 import TopPage from "./pages/top/TopPage";
 import NotFoundPage from './pages/notfound/NotFoundPage'
 import Mui from './pages/mui/Mui'
+import BoxPage from "./pages/three/BoxPage";
 
 const container = document.getElementById("root")!;
 const root = createRoot(container);
@@ -22,6 +23,7 @@ root.render(
           <Route path="/" element={<HomePage />} />
           <Route path="/example" element={<TopPage />} />
           <Route path="/mui" element={<Mui />} />
+          <Route path="/box_three" element={<BoxPage />} />
         </Routes>
       </Provider>
     </Router>
