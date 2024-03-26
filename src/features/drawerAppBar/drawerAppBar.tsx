@@ -42,7 +42,7 @@ export default function DrawerAppBar(props: Props) {
   };
 
   const drawer = (
-    <Box onClick={handleDrawerToggle} sx={{ textAlign: 'center' }}>
+    <Box component="div" onClick={handleDrawerToggle} sx={{ textAlign: 'center' }}>
       <Typography variant="h6" sx={{ my: 2 }}>
         Web by React
       </Typography>
@@ -62,7 +62,7 @@ export default function DrawerAppBar(props: Props) {
   const container = window !== undefined ? () => window().document.body : undefined;
 
   return (
-    <Box sx={{ display: 'flex' }}>
+    <Box component="div" sx={{ display: 'flex' }}>
       <CssBaseline />
       <AppBar component="nav">
         <Toolbar>
@@ -82,7 +82,7 @@ export default function DrawerAppBar(props: Props) {
           >
             Web by React
           </Typography>
-          <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
+          <Box component="div" sx={{ display: { xs: 'none', sm: 'block' } }}>
             {navItems.map((item) => (
               <Button key={item.name} sx={{ color: '#fff' }} onClick={() => navigate(item.url)}>
                 {item.name}
