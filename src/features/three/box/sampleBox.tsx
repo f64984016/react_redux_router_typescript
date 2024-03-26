@@ -2,7 +2,7 @@ import * as THREE from 'three'
 import { useRef, useState } from 'react'
 import { useFrame, ThreeElements } from '@react-three/fiber'
 
-export function sampleBox(props: ThreeElements['mesh']) {
+export function SampleBox(props: ThreeElements['mesh']): JSX.Element {
   const meshRef = useRef<THREE.Mesh>(null!)
   const [hovered, setHover] = useState(false)
   const [active, setActive] = useState(false)
