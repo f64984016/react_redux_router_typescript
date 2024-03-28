@@ -21,7 +21,7 @@ const Mui: React.FC = () => {
             <DrawerAppBar />
             <Box component="main" sx={{ p: 3 }}>
               <Toolbar />
-              <h1 style={{ fontSize: '4em' }}>Try MUI</h1>
+              <h1 style={{ fontSize: '4em' }}>Try MUI Demo</h1>
             </Box>
             <Box component="div" sx={{ flexGrow: 1, width : 0.85 }}>
               <Grid container spacing={2}>
