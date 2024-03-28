@@ -23,7 +23,7 @@ const Mui: React.FC = () => {
               <Toolbar />
               <h1 style={{ fontSize: '4em' }}>Try MUI</h1>
             </Box>
-            <Box component="div" sx={{ flexGrow: 1 }}>
+            <Box component="div" sx={{ flexGrow: 1, width : 0.85 }}>
               <Grid container spacing={2}>
                 <Grid xs={6} md={8}>
                   <Item>xs=6 md=8</Item>
