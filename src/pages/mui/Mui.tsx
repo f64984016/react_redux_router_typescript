@@ -24,7 +24,7 @@ const Mui: React.FC = () => {
               <h1 style={{ fontSize: '4em' }}>Try MUI Demo</h1>
             </Box>
             <Box component="div" sx={{ flexGrow: 1, width : 0.85 }}>
-              <Grid container spacing={2}>
+              <Grid container rowSpacing={5} columnSpacing={{ xs: 1, md: 5 }}>
                 <Grid xs={6} md={8}>
                   <Item>xs=6 md=8</Item>
                 </Grid>
