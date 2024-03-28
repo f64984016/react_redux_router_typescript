@@ -5,11 +5,23 @@ import { store } from "./app/store";
 import reportWebVitals from "./reportWebVitals";
 import "./index.css";
 import { HashRouter as Router, Route, Routes } from "react-router-dom";
+
+/**
+ *  路由對應的頁面
+ */
 import HomePage from "./pages/home/HomePage";
 import TopPage from "./pages/top/TopPage";
 import NotFoundPage from './pages/notfound/NotFoundPage'
 import Mui from './pages/mui/Mui'
 import BoxPage from "./pages/three/BoxPage";
+
+/**
+ * Material UI uses the Roboto font by default.
+ */
+import '@fontsource/roboto/300.css';
+import '@fontsource/roboto/400.css';
+import '@fontsource/roboto/500.css';
+import '@fontsource/roboto/700.css';
 
 const container = document.getElementById("root")!;
 const root = createRoot(container);
